@@ -4,7 +4,7 @@
  <title>Hyde</title>
  <link href="http://hyde.getpoole.com/atom.xml" rel="self"/>
  <link href="http://hyde.getpoole.com/"/>
- <updated>2017-05-13T15:43:29-03:00</updated>
+ <updated>2017-05-13T15:49:43-03:00</updated>
  <id>http://hyde.getpoole.com</id>
  <author>
    <name>Mark Otto</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Introducing Hyde</title>
+   <title>Introducing Hyde Test</title>
    <link href="http://hyde.getpoole.com/2013/12/28/introducing-hyde/"/>
    <updated>2013-12-28T00:00:00-02:00</updated>
    <id>http://hyde.getpoole.com/2013/12/28/introducing-hyde</id>
