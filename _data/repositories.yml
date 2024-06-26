@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - gustavofuhr
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - gustavofuhr/miyagi_pytorch_trainer
+  - gustavofuhr/random_scripts
+  - gustavofuhr/opencv_dollar_detector
+  - gustavofuhr/multi_pedestrian_tracking
+  - gustavofuhr/single_pedestrian_tracking
