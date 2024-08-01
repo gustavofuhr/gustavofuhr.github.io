@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The future of OCR is not to use OCR!
-date: 2024-04-20 21:01:00
+date: 2024-05-20 21:01:00
 description: End-to-end document understanding will be huge.
 tags: ocr document-understanding computer-vision
 categories: posts
