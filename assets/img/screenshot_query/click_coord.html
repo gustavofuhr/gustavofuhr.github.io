@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Image Coordinate Finder</title>
+    <style>
+        #image-container {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            max-height: 80vh;
+            overflow: auto;
+        }
+        #image {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+        #coordinates {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Improved Image Coordinate Finder</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <div id="image-container">
+        <img id="image" src="" alt="Uploaded image">
+    </div>
+    <div id="coordinates"></div>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const image = document.getElementById('image');
+        const imageContainer = document.getElementById('image-container');
+        const coordinatesDiv = document.getElementById('coordinates');
+        let originalWidth, originalHeight;
+
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                image.src = event.target.result;
+                image.onload = function() {
+                    originalWidth = this.naturalWidth;
+                    originalHeight = this.naturalHeight;
+                };
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        imageContainer.addEventListener('click', function(e) {
+            const rect = image.getBoundingClientRect();
+            const scaleX = originalWidth / rect.width;
+            const scaleY = originalHeight / rect.height;
+            
+            const clickX = e.clientX - rect.left + imageContainer.scrollLeft;
+            const clickY = e.clientY - rect.top + imageContainer.scrollTop;
+
+            const originalX = Math.round(clickX * scaleX);
+            const originalY = Math.round(clickY * scaleY);
+
+            coordinatesDiv.innerHTML = `Coordinates on original image: (${originalX}, ${originalY})`;
+        });
+    </script>
+</body>
+</html>
